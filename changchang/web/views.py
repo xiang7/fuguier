@@ -9,4 +9,4 @@ from django.shortcuts import redirect
 
 @login_required
 def index(request):
-    return HttpResponse("Hello, world. You're at the index.")
+    return render(request, 'index.html')

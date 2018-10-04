@@ -10,3 +10,11 @@ from django.shortcuts import redirect
 @login_required
 def index(request):
     return render(request, 'index.html')
+
+@login_required
+def work(request):
+    return render(request, 'work.html')
+
+@login_required
+def about(request):
+    return render(request, 'about.html')

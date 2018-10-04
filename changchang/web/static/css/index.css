@@ -18,7 +18,7 @@
 
 body {
 	border-style: solid;
-	border-color: #000;
+	border-color: #ea4c89;
 	border-width: 10px;
 	height: 100vh;
 	content: '';
@@ -40,6 +40,12 @@ body {
 	background: white;
 }
 
+.sticky-nav-active {
+	background: white;
+	z-index: 1000;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
 #home-image {
 	height: 85vh;
 }
@@ -50,6 +56,15 @@ body {
 	background-color: white;
     background-size: contain;
     width: 15vh;
-    height: 15vh;
+    height: 95%;
     background-position: center center;
+}
+
+a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:active {
+	background-color: #ea4c89;
+	color: #ffffff;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
 }

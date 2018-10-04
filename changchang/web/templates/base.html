@@ -24,7 +24,45 @@
     </head>
 
     <body>
-        {% block content %}{% endblock %}
+        <!-- .......... wrapper ......... -->
+        <div id="wrapper" style="height:100%">
+
+            <!-- .......... sticky-nav ......... -->
+            <div id="sticky-nav" class="uk-flex uk-flex-middle uk-flex-center" data-uk-sticky="{top:-400, animation:'uk-animation-slide-top', boundary:true, clsactive:'sticky-nav-active'}">
+                <a class="uk-margin-right" href="work">WORK</a>
+                <a id="logo-image" class="uk-margin-right uk-margin-left uk-vertical-align-middle" href="index"></a>
+                <a class="uk-margin-left" href="about">ABOUT</a>
+            </div> <!-- div #sticky-nav -->
+
+            {% block content %}{% endblock %}
+
+            <!-- .......... Connect with me ..........-->
+            <div style="background-color:#252525; color:#fff; margin-top:40px">
+                <div class="uk-grid">
+                    <div class="uk-width-small-1-2 uk-wdith-medium-1-2 uk-width-large-1-2 uk-container-center uk-text-center uk-text-large font-m">
+                        <br>
+                        <br>
+                        <p>Connect with me on</p>
+                    </div>
+                </div>
+                
+                <div class="uk-grid">
+                    <div class="uk-width-small-1-2 uk-wdith-small-1-2 uk-width-large-1-2 uk-container-center" style="text-align:center;">
+                        <a href="https://www.linkedin.com/profile/view?id=AAIAAA3Fx9YBx4cC_uDmmwv8Ro3mbAR38rhLtR4&trk=nav_responsive_tab_profile" target="_blank"><img height="50" width="50" src="{% static 'image/linkedin_icon.png' %}" alt="" style="margin:5px"></a>
+                        <a href="https://dribbble.com/changchangl" target="_blank"><img height="50" width="50" src="{% static 'image/dribbble-icon.png' %}" alt="" style="margin:5px"></a>
+                    </div>
+                </div>
+
+                <div class="uk-grid">
+                    <div class="uk-container-center uk-width-3-4 uk-text-center font-el">
+                        <hr style="border-color:rgba(0,0,0,0.2)">
+                        <p>&copy; 2016 <b>Changchang Liu</b>. All rights reserved.</p>
+                        <br>
+                    </div>
+                </div>
+            </div> <!-- .......... Connect with me ..........-->
+        
+        </div> <!-- .......... wrapper ......... -->
     </body>
 
 </html>

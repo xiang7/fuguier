@@ -67,40 +67,11 @@ a:visited{
 .project-title {
     /*font-size: 1.8vw;*/ 
     font-size:180%;
-    font-family: 'font-m'
 }
 
 .project-description {
 /*    font-size: 1vw;*/
     font-size:100%;
-    font-family: 'font-el';
-}
-
-/* .......... Font ..........*/
-
-@font-face {
-    font-family: 'font-m';
-    src: 
-         url('../fonts/Kozuka-Gothic-Pro.ttf') format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'font-el';
-    src: 
-         url('../fonts/KozGoPr6N-ExtraLight.otf') format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-.font-m {
-    font-family: 'font-m';
-}
-
-.font-el {
-    font-family: 'font-el';
 }
 
 /* ............................ M I N I  M E N U ............................ */
@@ -199,7 +170,6 @@ header{
 }
 .main-nav{
 	float: left;
-	font-family: futura;
 }
 
 .main-nav a{
@@ -278,7 +248,6 @@ header{
 .shNew{
   float: left;
   font-size:12px;
-  font-family: 'futura_ltbold', helvetica, arial, sans-serif;
   color: #00c09e;
   padding: 0 0 0 10px;
 }
@@ -286,7 +255,6 @@ header{
   float: left;
   clear: both;
   font-size:24px;
-  font-family: 'futura_ltbold', helvetica, arial, sans-serif;
   color: #444;
   padding: 0 0 0 10px;
 }
@@ -359,7 +327,6 @@ header{
 	clear: both;
 }
 .gform input{
-	font-family: 'futura_ltregular', helvetica, arial, sans-serif;
 	height: 60px;
 	width: 204px;
 	font-size: 20px;
@@ -371,7 +338,6 @@ header{
 	outline: none;
 }
 .gform textarea{
-	font-family: 'futura_ltregular', helvetica, arial, sans-serif;
 	height: 320px;
 	width:80%;
 	font-size: 20px;
@@ -394,7 +360,6 @@ header{
 	background-color: rgba(0,0,0, 0.05);
 	margin-bottom: 10px;
 	margin-top: 9px;
-    font-family: 'font-el';
 }
 .ss-q-item-label{
 	float: left;
@@ -406,7 +371,6 @@ header{
 	width: 150px;
 	height: 35px;
 	cursor: pointer;
-    	font-family: 'font-el';
 	font-size: 16px;
 	background-image: url(/imgs/projectbg.png);
 	-webkit-transition: all 0.1s ease-in-out;

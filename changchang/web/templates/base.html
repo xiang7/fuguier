@@ -29,9 +29,9 @@
 
             <!-- .......... sticky-nav ......... -->
             <div id="sticky-nav" class="uk-flex uk-flex-middle uk-flex-center" data-uk-sticky="{top:-400, animation:'uk-animation-slide-top', boundary:true, clsactive:'sticky-nav-active'}">
-                <a class="uk-margin-right {% if 'work' in request.path %}sticky-nav-link-active{% endif %}" href="work">WORK</a>
+                <a class="uk-margin-large-right {% if 'work' in request.path %}sticky-nav-link-active{% endif %}" href="work">WORK</a>
                 <a id="logo-image" class="uk-margin-right uk-margin-left uk-vertical-align-middle" href="index"></a>
-                <a class="uk-margin-left {% if 'about' in request.path %}sticky-nav-link-active{% endif %}" href="about">ABOUT</a>
+                <a class="uk-margin-large-left {% if 'about' in request.path %}sticky-nav-link-active{% endif %}" href="about">ABOUT</a>
             </div> <!-- div #sticky-nav -->
 
             {% block content %}{% endblock %}

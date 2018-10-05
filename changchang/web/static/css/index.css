@@ -68,3 +68,13 @@ a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:ac
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+.sticky-nav-link-active {
+	border-bottom-style: solid;
+	border-bottom-color: #ea4c89;
+	border-bottom-width: 2px;
+}
+
+#about {
+	background-image: linear-gradient(305deg, #ca67b3, #ea4c89);
+}

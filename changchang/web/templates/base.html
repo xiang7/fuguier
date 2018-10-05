@@ -29,15 +29,15 @@
 
             <!-- .......... sticky-nav ......... -->
             <div id="sticky-nav" class="uk-flex uk-flex-middle uk-flex-center" data-uk-sticky="{top:-400, animation:'uk-animation-slide-top', boundary:true, clsactive:'sticky-nav-active'}">
-                <a class="uk-margin-right" href="work">WORK</a>
+                <a class="uk-margin-right {% if 'work' in request.path %}sticky-nav-link-active{% endif %}" href="work">WORK</a>
                 <a id="logo-image" class="uk-margin-right uk-margin-left uk-vertical-align-middle" href="index"></a>
-                <a class="uk-margin-left" href="about">ABOUT</a>
+                <a class="uk-margin-left {% if 'about' in request.path %}sticky-nav-link-active{% endif %}" href="about">ABOUT</a>
             </div> <!-- div #sticky-nav -->
 
             {% block content %}{% endblock %}
 
             <!-- .......... Connect with me ..........-->
-            <div style="background-color:#252525; color:#fff; margin-top:40px">
+            <div style="background-color:#252525; color:#fff;">
                 <div class="uk-grid">
                     <div class="uk-width-small-1-2 uk-wdith-medium-1-2 uk-width-large-1-2 uk-container-center uk-text-center uk-text-large font-m">
                         <br>
@@ -53,10 +53,11 @@
                     </div>
                 </div>
 
+                <hr class="uk-width-8-10 uk-container-center">
+
                 <div class="uk-grid">
                     <div class="uk-container-center uk-width-3-4 uk-text-center font-el">
-                        <hr style="border-color:rgba(0,0,0,0.2)">
-                        <p>&copy; 2016 <b>Changchang Liu</b>. All rights reserved.</p>
+                        <p>&copy; 2018 <b>Changchang Liu</b>. All rights reserved.</p>
                         <br>
                     </div>
                 </div>

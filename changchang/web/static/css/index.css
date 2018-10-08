@@ -4,6 +4,10 @@
     color: #252525;
 }
 
+.white-text {
+	color:#fff;
+}
+
 /* Responsive */
 @media only screen and (orientation:portrait){
     #home-image {

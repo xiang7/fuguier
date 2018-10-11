@@ -26,5 +26,6 @@ urlpatterns = [
     path('logout', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('work', views.work, name='work'),
     path('about', views.about, name='about'),
+    path('design-challenge', views.design_challenge, name='design_challenge'),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,228 @@
+/* Responsive */
+@media only screen and (orientation:portrait){
+    .title-text
+    {
+        font-size:140%;
+    }
+    .subtitle-text
+    {
+        font-size: 105%;
+    }
+}
+ @media only screen and (orientation:landscape){
+    .title-text
+    {
+        font-size:210%;
+    }
+    .subtitle-text
+    {
+        font-size: 140%;
+    }
+}
+
+.uk-subnav > .uk-active > * {
+    background-color: #fff;
+    color: #ed2d8e;
+    border: 1px solid #ed2d8e;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .2);
+}
+
+.uk-subnav > * > a {
+    background-color: #fff;
+    color: #5D5D5D;
+    border: 1px solid #5D5D5D;
+    border-radius: 15px;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .2);
+}
+
+a:link{
+	text-decoration: none;
+	color: #5D5D5D;
+}
+a:visited{
+	text-decoration: none;
+	color: #5D5D5D;
+}
+
+.approach-item-text {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color:#fff;
+    font-size: 180%;
+    text-transform: uppercase;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 0%;
+    opacity: 1.0;
+}
+
+.about-text:hover > .uk-overlay > p{
+    opacity: 0.0;
+}
+
+.project-title {
+    /*font-size: 1.8vw;*/ 
+    font-size:180%;
+}
+
+.project-description {
+/*    font-size: 1vw;*/
+    font-size:100%;
+}
+
+/* ............................ H E A D E R ............................ */
+
+header{
+	-webkit-box-shadow:  0px 0px 17px 0px rgba(0, 0, 0, 0.0);
+    box-shadow:  0px 0px 17px 0px rgba(0, 0, 0, 0.0);
+}
+.head{
+	margin: auto;
+	width: 960px;
+	height: 160px;
+}
+.logo{
+	background-image: url(../image/changchang_logo.png);
+	background-repeat: no-repeat;
+	background-color: white;
+    background-size: contain;
+    width: 60px;
+    height: 80px;
+    background-position: center center;
+}
+.logoindex{
+	background-image: url(../image/changchang_logo.png);
+	background-repeat: no-repeat;
+	background-color: white;
+    background-size: contain;
+    width: 60px;
+    height: 80px;
+    background-position: center center;
+}
+.main-nav{
+	float: left;
+}
+
+.main-nav a{
+	display: block;
+	float: left;
+	height: 155px;
+	width: 160px;
+	padding: 0px 0px 0px 0px;
+	font-size: 16px;
+	color: #5d5d5d;
+	text-align: center;
+	border-bottom: 0px solid #5d5d5d;
+	color: rgba(0, 0, 0, 0.0);
+	line-height: 40px;
+	
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out; /* Firefox 4 
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out; /* Opera */
+}
+.main-nav a:hover{
+	background-color: #ed2d8e;
+	height: 135px;
+	border-bottom: 20px solid #5d5d5d;
+	color: #5d5d5d;
+	border-top: 5px solid #ed2d8e;
+}
+.main-nav a span{
+	background-image: url(../image/WEB_NAVI_SQUARE.png);
+	background-repeat: no-repeat;
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin: auto;
+	margin-top: 45px;
+	
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out; /* Firefox 4 */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out; /* Opera */
+}
+.main-nav a:hover span{
+	
+	margin-top: 25px;
+}
+.navWork{
+	background-color: #777;
+	border-top: 5px solid #666;
+}
+.navWork span{background-position: 50% 100%;}
+.navWork:hover span{background-position: 50% 0%;}
+.navAbout{
+	background-color: #999;
+	border-top: 5px solid #888;	
+}
+.navAbout span{background-position: 0% 100%;}
+.navAbout:hover span{background-position: 0% 0%;}
+.navHire{
+	background-color: #bbb;
+	border-top: 5px solid #aaa;	
+}
+.navHire span{background-position: 100% 100%;}
+.navHire:hover span{background-position: 100% 0%;}
+
+.shLink{
+  float: left;
+  padding: 40px 0 0 31px;
+  height: 120px;
+  width: 129px;
+}
+.shLink:hover .shTitle:after
+{
+	content: " →";
+	font:normal 14px/14px Arial;
+}
+.shNew{
+  float: left;
+  font-size:12px;
+  color: #00c09e;
+  padding: 0 0 0 10px;
+}
+.shTitle{
+  float: left;
+  clear: both;
+  font-size:24px;
+  color: #444;
+  padding: 0 0 0 10px;
+}
+.shLink img{
+  float: left;
+  clear: both;
+  width: 100px;
+}
+
+/* ********* Project pages ********** */
+
+.project-title-category-span {
+    border-width:1px;
+    border-style:solid;
+    border-color:#fff;
+    border-radius:10px;
+    color:#fff;
+    padding: 2px 10px 2px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.project-separator-bar-div {
+    width:10vw;
+    border:solid 2px #ff6000;
+    border-radius:2px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:60px;
+}
+
+.project-orange-text {
+    color:#ff6000;
+}
+
+.project-orange-background {
+    background-color: #ff6000;
+}

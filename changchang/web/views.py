@@ -18,3 +18,7 @@ def work(request):
 @login_required
 def about(request):
     return render(request, 'about.html')
+
+@login_required
+def design_challenge(request):
+ 	return render(request, 'design_challenge.html')

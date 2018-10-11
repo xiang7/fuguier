@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<!-- .......... title section .......... -->
+<div class="uk-vertical-align uk-text-center project-orange-background" style="height:379px;">
+    <div class="uk-container-center uk-vertical-align-middle">
+        <h4 class="uk-text-large uk-text-center title-text"><b style="color:#fff">{{ title }}</b></h4>
+        <p class="uk-text-center" style="color:#fff">{{ subtitle }}</p>
+        <br>
+        <div class="uk-container-center uk-flex uk-flex-middle uk-flex-center">
+            {% for category in categories %}
+            <span class="project-title-category-span">{{ category }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div> <!-- div title section -->
+
+<!-- .......... Overview .......... -->
+<div class="uk-container-center uk-text-center uk-width-3-4 uk-width-medium-1-2">
+    <br><br>
+    <p class="uk-text-center uk-text-large"><b>Overview</b></p>
+
+    <p class="uk-text-left">
+        {% for line in overviewlines %}
+        {{ line }} <br>
+        {% endfor %}
+    </p>
+    <br><br>
+</div>
+
+<!-- .......... Separator .......... -->
+<div class="project-separator-bar-div">
+</div>
+
+<!-- .......... Demos ..........-->
+{% for demo in demos %}
+<div class="uk-text-center uk-container-center">
+    <p class="uk-text-bold"><span class="project-orange-text">#{{ forloop.counter }}<span><br>{{ demo.title }}</p>
+</div>
+
+<div class="uk-container-center uk-width-3-4 uk-width-medium-1-2 uk-margin-large-bottom">
+    {% for image in demo.images %}
+    <img class="uk-margin-bottom" src="{% static image %}">
+    {% endfor %}
+</div>
+{% endfor %}
+
+{% endblock %}

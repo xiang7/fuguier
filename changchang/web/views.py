@@ -24,6 +24,8 @@ def design_challenge(request):
 	context = {
 		'title': 'Daily Design Challenge',
 		'subtitle': 'from uisdc.com | 2017',
+		'featurecolor': '#ff6000',
+		'primarycolor': '#fff',
 		'categories': ['UI / UX', 'illustration'],
 		'overviewlines': [
 			'As a designer, the last thing I want to see is that I’ve lost passion in designing; or stopped being curious about new trends and techiniques.',
@@ -33,68 +35,108 @@ def design_challenge(request):
 		'demos': [
 			{
 				'title': 'Design A Font, AND Make It to A Logo (Plant Tech)',
-				'images': ['image/project-yizhi.png'],
+				'images': [{'filename':'project-yizhi.png'}],
 				},
 			{
 				'title': 'Create an Illustration, AND Design It Into A Weather App',
-				'images': ['image/project-weather-app.png'],
+				'images': [{'filename':'project-weather-app.png'}],
 				},
 			{
 				'title': 'Create 2 Illustrations, AND Design Them Into App Intro and Banner',
-				'images': ['image/project-nextdoor.png'],
+				'images': [{'filename':'project-nextdoor.png'}],
 				},
 			{
 				'title': 'Create Graph Line in Ai, AND Design It Into an App Interface',
-				'images': ['image/project-finance-app.png'],
+				'images': [{'filename':'project-finance-app.png'}],
 				},
 			{
 				'title': 'Create 3D Objects in Ai, AND Design It Into an App Interface',
-				'images': ['image/project-gift-card-app-redesign.png'],
+				'images': [{'filename':'project-gift-card-app-redesign.png'}],
 				},
 			{
 				'title': 'Show the Process of Designing a Figure Using MBE Style',
-				'images': ['image/project-capricorn-illustration.png', 'image/project-capricorn-sketch.png'],
+				'images': [{'filename':'project-capricorn-illustration.png'}, {'filename':'project-capricorn-sketch.png'}],
 				},
 			{
 				'title': 'Design a Pixel Figure in Ps AND Make It Into a GIF',
-				'images': ['image/project-pixel-graphic-corgi.png'],
+				'images': [{'filename':'project-pixel-graphic-corgi.gif'}],
 				},
 			{
 				'title': 'Design a Set of Objects Using the Same Style',
-				'images': ['image/project-bag-icons.png'],
+				'images': [{'filename':'project-bag-icons.png'}],
 				},
 			{
 				'title': 'Design a Set of Objects Using the Same Style V2',
-				'images': ['image/project-icon-style-explorations.png'],
+				'images': [{'filename':'project-icon-style-explorations.png'}],
 				},
 			{
 				'title': 'Design a Set of Objects AND Make Them Into a Scene',
-				'images': ['image/project-combo-mono.png'],
+				'images': [{'filename':'project-combo-mono.png'}],
 				},
 			{
 				'title': 'Apply Colors to The Scene Created in #10',
-				'images': ['image/project-combo-color.png'],
+				'images': [{'filename':'project-combo-color.png'}],
 				},
 			{
 				'title': 'Draw An Axe, Pay Attention to Textures Different Mateials',
-				'images': ['image/project-indian-axe-rendering.png'],
+				'images': [{'filename':'project-indian-axe-rendering.png'}],
 				},
 			{
 				'title': 'Design A Set of Icons for Mobile Interface',
-				'images': ['image/project-mobile-icon.png','image/project-mobile-icon-camera.png','image/project-mobile-icon-settings.png','image/project-mobile-icon-contacts.png','image/project-mobile-icon-email.png'],
+				'images': [{'filename':'project-mobile-icon.gif'},{'filename':'project-mobile-icon-camera.png'},{'filename':'project-mobile-icon-settings.png'},{'filename':'project-mobile-icon-contacts.png'},{'filename':'project-mobile-icon-email.png'}],
 				},
 			{
 				'title': 'Based on #13, Design An Unconventional Unlocking Experience',
-				'images': ['image/project-mobile-unlocking.png'],
+				'images': [{'filename':'project-mobile-unlocking.png'}],
 				},
 			{
 				'title': 'Pick an App, AND Redesign its Popup Dialog',
-				'images': ['image/project-mobile-popup.png'],
+				'images': [{'filename':'image/project-mobile-popup.png'}],
 				},
 			{
 				'title': 'Do An Illustration!',
-				'images': ['image/project-illustration-group-photo.png'],
+				'images': [{'filename':'project-illustration-group-photo.png'}],
 				},
 			]
 		}	
 	return render(request, 'project.html', context)
+
+@login_required
+def design_challenge_template(request):
+	context = {
+		'title': 'title text',
+		'subtitle': 'subtitle text',
+		'titlebackgroundimage' : 'linear-gradient(to top, #f38a93, #fa5c75);',
+		'featurecolor': '#ff6000',
+		'primarycolor': '#fff',
+		'categories': ['Category #1', 'Category #2'],
+		'overviewlines': [
+			'overview line #1',
+			'overview line #2'
+			],
+		'bannerimage': {'filename':'project-hackathon-banner.png', 'height':18},
+		'demos': [
+			{
+				'title': 'title #1',
+				'descriptions': ['description line 1', 'description line 2'],
+				'images': [
+					{
+						'filename': 'project-mobile-popup.png',
+						'descriptions': ['description line 1', 'description 2']
+						},
+					]
+				},
+			{
+				'title': 'title #2',
+				'descriptions': ['description line 1', 'description line 2'],
+				'images': [
+					{
+						'filename': 'project-nextdoor.png',
+						'descriptions': ['description line 1', 'description 2']
+						},
+					]
+				},
+			]
+		}	
+	return render(request, 'project.html', context)
+

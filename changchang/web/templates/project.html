@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load mathfilters %}
 
 {% block content %}
 <!-- .......... title section .......... -->
-<div class="uk-vertical-align uk-text-center project-orange-background" style="height:379px;">
+<div class="uk-vertical-align uk-text-center" style="height:40vh;{% if titlebackgroundimage %}background-image:{{ titlebackgroundimage}} {% else %} background-color:{{ featurecolor }} {% endif %}">
     <div class="uk-container-center uk-vertical-align-middle">
-        <h4 class="uk-text-large uk-text-center title-text"><b style="color:#fff">{{ title }}</b></h4>
-        <p class="uk-text-center" style="color:#fff">{{ subtitle }}</p>
+        <h4 class="uk-text-large uk-text-center title-text"><b style="color:{{ primarycolor }}">{{ title }}</b></h4>
+        <p class="uk-text-center" style="color:{{ primarycolor }}">{{ subtitle }}</p>
         <br>
         <div class="uk-container-center uk-flex uk-flex-middle uk-flex-center">
             {% for category in categories %}
@@ -15,6 +16,13 @@
         </div>
     </div>
 </div> <!-- div title section -->
+
+<!-- .......... Banner image .......... -->
+{% if bannerimage %}
+<div class="uk-container-center uk-text-center" style="height:{{ bannerimage.height }}vh;margin-top:-{{ bannerimage.height|div:2 }}vh">
+    <img src="{% static 'image/'|add:bannerimage.filename %}" style="height:100%">
+</div>
+{% endif %}
 
 <!-- .......... Overview .......... -->
 <div class="uk-container-center uk-text-center uk-width-3-4 uk-width-medium-1-2">
@@ -36,12 +44,28 @@
 <!-- .......... Demos ..........-->
 {% for demo in demos %}
 <div class="uk-text-center uk-container-center">
-    <p class="uk-text-bold"><span class="project-orange-text">#{{ forloop.counter }}<span><br>{{ demo.title }}</p>
+    <p class="uk-text-bold"><span style="color:{{ featurecolor }}">#{{ forloop.counter }}<span><br>{{ demo.title }}</p>
+        {% if demo.descriptions and demo.descriptions|length > 0 %}
+        <div class="uk-container-center uk-text-center uk-width-3-4 uk-width-medium-1-2">
+            <p class="uk-text-left">
+                {% for description in demo.descriptions %}
+                {{ description }} <br>
+                {% endfor %}
+            </p>
+        </div>
+        {% endif %}
 </div>
 
 <div class="uk-container-center uk-width-3-4 uk-width-medium-1-2 uk-margin-large-bottom">
     {% for image in demo.images %}
-    <img class="uk-margin-bottom" src="{% static image %}">
+    <img class="uk-margin-bottom" src="{% static 'image/'|add:image.filename %}">
+    {% if image.descriptions and image.descriptions|length > 0 %}
+        <p class="uk-text-center uk-text-small">
+            {% for description in image.descriptions %}
+            {{ description }} <br>
+            {% endfor %}
+        </p>
+        {% endif %}
     {% endfor %}
 </div>
 {% endfor %}

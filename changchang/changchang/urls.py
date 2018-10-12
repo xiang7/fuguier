@@ -27,5 +27,6 @@ urlpatterns = [
     path('work', views.work, name='work'),
     path('about', views.about, name='about'),
     path('design-challenge', views.design_challenge, name='design_challenge'),
+    path('design-challenge-template', views.design_challenge_template, name='design_challenge_template'),
     path('admin/', admin.site.urls),
 ]

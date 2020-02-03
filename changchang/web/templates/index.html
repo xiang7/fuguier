@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 {% load staticfiles%}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<script src="{% static 'js/changchang/index.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <!-- .......... Home Image .......... -->
+<div id="home-image-top"></div>
 <div id="home-image-div"><div id="home-image" class="uk-clear-fix uk-cover-background index-gif uk-height-1-1 uk-container-center"></div></div>
-<div style="height:28vh;" class="home-image-text uk-text-center uk-margin-top"><p>Hi— I’m <b style="color:#ea4c89">Changchang</b>,</p><p>a cat-loving UI designer.</p></div>
+<br>
+<div style="height:28vh"><div style="width:80%" class="home-image-text uk-text-center uk-container-center"><p>Hi&#8209; I’m <b style="color:#ea4c89">Changchang</b>, a cat&#8209;loving UI designer.</p></div></div>
 
 <!-- .......... Work .......... -->
 <div id="work">
@@ -14,7 +21,7 @@
 </div> <!-- div #work -->
     
 <!-- .......... Demos ..........-->
-<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom uk-width-8-10">
+<div class="uk-container uk-container-center uk-width-8-10" id="demos">
     <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-4" data-uk-grid="{gutter:20, controls: '#work-filter'}">
 
         <div data-uk-filter="ui-ux-filter, branding-filter, all-filter">
@@ -99,11 +106,11 @@
     </div>
 </div>
 
-<div class="uk-text-center">
-	<a class="uk-text-center link-button" href="work">See More</a>
+<div class="uk-text-center" id="see-more">
+    <div style="height: 8vh"></div>
+	<a class="uk-text-center link-button" href="#work">See More</a>
+    <div style="height: 8vh"></div>
 </div>
-
-<br><br><br>
 
 <!-- .......... About ..........-->
 <div id="about">
@@ -113,8 +120,9 @@
     <div class="uk-container-center" style="height:180px;width:180px"><img src="{% static 'image/portrait-thumbnail-new.png' %}"></div>
     <div class="uk-grid uk-width-8-10 uk-container-center" style="border-radius:36px; background-color:#fff;box-shadow: 0 4px 30px 0 #961949;margin-top:-90px">
         <div class="uk-width-medium-3-4 uk-width-large-3-4 uk-width-small-8-10 uk-container-center">
-            <p class="uk-text-left uk-text-large font-el" style="margin-top:118px;margin-bottom:118px;">Changchang is a self-motivated, versatile and passionate designer with over 7 years developing impactful design.
-                <br><br>She focuses on human engagement, creative strategy and visualization.<br>She believes in egoless collaboration, unstoppable grit, the infinite exquisiteness and above all, <b>empathy</b>.</p>
+            <p class="uk-text-left font-el" style="margin-top:118px;margin-bottom:118px;">Changchang is a self-motivated, versatile and passionate designer who’s been developing impactful design for 9+ years. She believes in egoless collaboration, unstopplable grit, the in nite exquisiness...<br><br>
+            And above all, empathy.<br><br>
+            Experienced in UI/ Visual Design. Advanced skills in content/ media/ streaming platform design. <b style="color:#ea4c89;text-decoration:underline;">SEE MORE</b></p>
         </div>
     </div>
     <br><br>

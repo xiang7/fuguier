@@ -13,7 +13,6 @@
         <link rel="apple-touch-icon-precomposed" href="{% static 'images/apple-touch-icon.png' %}">
         <link rel="stylesheet" href="{% static 'css/uikit.docs.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
         <script src="{% static 'js/jquery.js' %}"></script>
         <script src="{% static 'js/uikit.min.js' %}"></script>
         <script src="{% static 'js/components/slider.js' %}"></script>
@@ -29,9 +28,9 @@
 
             <!-- .......... sticky-nav ......... -->
             <div id="sticky-nav" class="uk-flex uk-flex-middle uk-flex-center nav-text" data-uk-sticky="{top:-400, animation:'uk-animation-slide-top', boundary:true, clsactive:'sticky-nav-active'}">
-                <a class="nav-link {% if 'work' in request.path %}sticky-nav-link-active{% endif %}" href="work">WORK</a>
-                <a id="logo-image" class="nav-link uk-vertical-align-middle" href="index"></a>
-                <a class="nav-link {% if 'about' in request.path %}sticky-nav-link-active{% endif %}" href="about">ABOUT</a>
+                <a class="nav-link nav-link-text" id="work-link">WORK</a>
+                <a id="logo-image" class="nav-link nav-link-logo uk-vertical-align-middle" href="index"></a>
+                <a class="nav-link nav-link-text" id="about-link">ABOUT</a>
             </div> <!-- div #sticky-nav -->
 
             {% block content %}{% endblock %}
@@ -39,24 +38,29 @@
             <!-- .......... Connect with me ..........-->
             <div style="background-color:#252525;">
                 <div class="uk-grid">
-                    <div class="uk-width-small-1-2 uk-wdith-medium-1-2 uk-width-large-1-2 uk-container-center uk-text-center uk-text-large font-m">
-                        <br>
+                    <div class="uk-width-small-1-2 uk-wdith-medium-1-2 uk-width-large-1-2 uk-container-center uk-text-center nav-text font-m">
                         <br>
                         <p class="white-text" style="font-weight:bold;">Connect with me on</p>
                     </div>
                 </div>
-                
-                <div class="uk-grid">
-                    <div class="uk-width-small-1-2 uk-wdith-small-1-2 uk-width-large-1-2 uk-container-center" style="text-align:center;">
-                        <a href="https://www.linkedin.com/profile/view?id=AAIAAA3Fx9YBx4cC_uDmmwv8Ro3mbAR38rhLtR4&trk=nav_responsive_tab_profile" target="_blank"><img height="50" width="50" src="{% static 'image/linkedin_icon.png' %}" alt="" style="margin:5px"></a>
-                        <a href="https://dribbble.com/changchangl" target="_blank"><img height="50" width="50" src="{% static 'image/dribbble-icon.png' %}" alt="" style="margin:5px"></a>
+                <br>
+                <div class="uk-flex">
+                    <div class="uk-width-1-4 uk-container-center uk-flex-center uk-grid uk-text-center">
+                        <div class="uk-width-1-3 uk-padding-remove">
+                            <a href="https://www.linkedin.com/profile/view?id=AAIAAA3Fx9YBx4cC_uDmmwv8Ro3mbAR38rhLtR4&trk=nav_responsive_tab_profile" target="_blank"><img height="40" width="40" src="{% static 'image/linkedin_icon.png' %}" alt="" style="margin:5px"></a>
+                            <p class="white-text uk-text-small uk-margin-small">Linkedin</p>
+                        </div>
+                        <div class="uk-width-1-3 uk-padding-remove">
+                            <a href="https://dribbble.com/changchangl" target="_blank"><img height="40" width="40" src="{% static 'image/dribbble-icon.png' %}" alt="" style="margin:5px"></a>
+                            <p class="white-text uk-text-small uk-margin-small">Dribbble</p>
+                        </div>
                     </div>
                 </div>
-
+                <br>
                 <hr class="uk-width-8-10 uk-container-center">
-
+                
                 <div class="uk-grid">
-                    <div class="uk-container-center uk-width-3-4 uk-text-center font-el">
+                    <div class="uk-container-center uk-width-3-4 uk-text-center">
                         <p class="white-text uk-text-small">&copy; 2018 Changchang Liu. All rights reserved.</p>
                         <br>
                     </div>

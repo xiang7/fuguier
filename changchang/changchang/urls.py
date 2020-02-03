@@ -22,11 +22,20 @@ from django.conf import settings
 urlpatterns = [
     path('', views.index, name='index'),
     path('index', views.index, name='index'),
-    path('login', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    path('logout', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
-    path('work', views.work, name='work'),
-    path('about', views.about, name='about'),
     path('design-challenge', views.design_challenge, name='design_challenge'),
+    path('hackathon', views.hackathon, name='hackathon'),
+    path('cinema-4d', views.cinema_4d, name='cinema-4d'),
+    path('roku-themes', views.roku_themes, name='roku-themes'),
+    path('guest-mode', views.guest_mode, name='guest-mode'),
+    path('roku-zones', views.roku_zones, name='roku-zones'),
+    path('voice-search', views.voice_search, name='voice-search'),
+    path('pet-to-you', views.pet_to_you, name='pet-to-you'),
     path('design-challenge-template', views.design_challenge_template, name='design_challenge_template'),
-    path('admin/', admin.site.urls),
+    
+#    Login pages:
+#    path('login', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+#    path('logout', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    
+#    Admin pages:
+#    path('admin/', admin.site.urls),
 ]

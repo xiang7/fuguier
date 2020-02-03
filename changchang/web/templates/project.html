@@ -3,71 +3,139 @@
 {% load mathfilters %}
 
 {% block content %}
+{% for c in contents %}
+
 <!-- .......... title section .......... -->
-<div class="uk-vertical-align uk-text-center" style="height:40vh;{% if titlebackgroundimage %}background-image:{{ titlebackgroundimage}} {% else %} background-color:{{ featurecolor }} {% endif %}">
-    <div class="uk-container-center uk-vertical-align-middle">
-        <h4 class="uk-text-large uk-text-center title-text"><b style="color:{{ primarycolor }}">{{ title }}</b></h4>
-        <p class="uk-text-center" style="color:{{ primarycolor }}">{{ subtitle }}</p>
-        <br>
-        <div class="uk-container-center uk-flex uk-flex-middle uk-flex-center">
-            {% for category in categories %}
-            <span class="project-title-category-span">{{ category }}</span>
-            {% endfor %}
+<div class="uk-text-center" style="
+{% if c.bannerimage %}
+    {% if c.bannerimage.leadheight %}
+        height:{{ c.bannerimage.leadheight|add:34 }}vh
+    {% else %}
+        height:{{ c.bannerimage.height|div:2|add:34 }}vh
+    {% endif %}
+{% else %} 
+    height:40vh 
+{% endif %};
+ 
+{% if c.titlebackgroundimagewithcolor %}
+    background:url({% static 'image/'|add:c.titlebackgroundimagewithcolor.image %}) center center no-repeat, {{ c.titlebackgroundimagewithcolor.color }}; background-size:auto 100%
+{% elif c.titlebackgroundimage %}
+    background-image:{{ c.titlebackgroundimage}}
+{% else %} 
+    background-color:{{ c.featurecolor }} 
+{% endif %};
+">
+    <div class="uk-container-center uk-vertical-align" style="
+{% if c.bannerimage %}
+    height:34vh
+{% else %}
+    height:40vh
+{% endif %};
+">
+        <div class="uk-vertical-align-middle">
+            <h4 class="uk-text-large uk-text-center title-text"><b style="color:{{ c.primarycolor }}">{{ c.title }}</b></h4>
+            <p class="uk-text-center" style="color:{{ c.primarycolor }}">{{ c.subtitle }}</p>
+            <br>
+            <div class="uk-container-center uk-flex uk-flex-middle uk-flex-center">
+                {% for category in c.categories %}
+                <span class="project-title-category-span">{{ category }}</span>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div> <!-- div title section -->
 
 <!-- .......... Banner image .......... -->
-{% if bannerimage %}
-<div class="uk-container-center uk-text-center" style="height:{{ bannerimage.height }}vh;margin-top:-{{ bannerimage.height|div:2 }}vh">
-    <img src="{% static 'image/'|add:bannerimage.filename %}" style="height:100%">
+{% if c.bannerimage %}
+<div class="uk-container-center uk-text-center" style="height:{{ c.bannerimage.height }}vh;background:url({% static 'image/'|add:c.bannerimage.filename %}) center center no-repeat; background-size: auto 100%;
+{% if c.bannerimage.leadheight %}
+    margin-top:-{{ c.bannerimage.leadheight }}vh;
+{% else %}
+    margin-top:-{{ c.bannerimage.height|div:2 }}vh;
+{% endif %}
+">
 </div>
 {% endif %}
 
 <!-- .......... Overview .......... -->
+{% if c.overviewtitle or c.overviewlines %}
 <div class="uk-container-center uk-text-center uk-width-3-4 uk-width-medium-1-2">
     <br><br>
-    <p class="uk-text-center uk-text-large"><b>Overview</b></p>
+    <p class="uk-text-center uk-text-large">
+        <b>
+        {% if c.overviewtitle %} {{ c.overviewtitle }} {% else %} Overview {% endif %}
+        </b>
+    </p>
 
     <p class="uk-text-left">
-        {% for line in overviewlines %}
+        {% for line in c.overviewlines %}
         {{ line }} <br>
         {% endfor %}
     </p>
     <br><br>
 </div>
+{% else %}
+<br><br>
+{% endif %}
 
 <!-- .......... Separator .......... -->
-<div class="project-separator-bar-div">
+{% if c.overviewtitle or c.overviewlines %}
+<div style="width:10vw; margin-left:auto; margin-right:auto; margin-bottom:60px; border-radius:2px;
+{% if c.separatorimage %}
+    background-image: {{ c.separatorimage }};
+    height: 4px;
+{% else %}
+    border:solid 2px {{ c.featurecolor }};
+{% endif %}
+">
 </div>
+{% else %}
+<br><br>
+{% endif %}
 
 <!-- .......... Demos ..........-->
-{% for demo in demos %}
+{% for demo in c.demos %}
 <div class="uk-text-center uk-container-center">
-    <p class="uk-text-bold"><span style="color:{{ featurecolor }}">#{{ forloop.counter }}<span><br>{{ demo.title }}</p>
+    <p class="uk-text-bold"><span style="color:{{ c.featurecolor }}">#{{ forloop.counter }}<span><br>{{ demo.title }}</p>
         {% if demo.descriptions and demo.descriptions|length > 0 %}
         <div class="uk-container-center uk-text-center uk-width-3-4 uk-width-medium-1-2">
             <p class="uk-text-left">
                 {% for description in demo.descriptions %}
-                {{ description }} <br>
+                {{ description |safe }} <br>
                 {% endfor %}
             </p>
         </div>
         {% endif %}
 </div>
 
-<div class="uk-container-center uk-width-3-4 uk-width-medium-1-2 uk-margin-large-bottom">
-    {% for image in demo.images %}
+{% for image in demo.images %}
+<div class="uk-container-center uk-width-3-4 uk-width-medium-1-2">
+    {% if image.prologues and image.prologues|length > 0 %}
+        <p class="uk-text-center">
+            {% for prologue in image.prologues %}
+            {{ prologue }} <br>
+            {% endfor %}
+        </p>
+    {% endif %}
     <img class="uk-margin-bottom" src="{% static 'image/'|add:image.filename %}">
     {% if image.descriptions and image.descriptions|length > 0 %}
-        <p class="uk-text-center uk-text-small">
+        <p class="uk-text-center uk-text-small uk-margin-remove" style='color:#9b9b9b'>
             {% for description in image.descriptions %}
             {{ description }} <br>
             {% endfor %}
         </p>
-        {% endif %}
-    {% endfor %}
+        <br>
+    {% endif %}
 </div>
-{% endfor %}
+<br>
+{% endfor %} <!-- contents.demos.images -->
+<br>
+{% endfor %} <!-- contents.demos -->
+<br>
+{% if c.transitiontext %}
+    {{ c.transitiontext |safe }}
+    <br><br>
+{% endif %}
+{% endfor %} <!-- contents -->
 
 {% endblock %}

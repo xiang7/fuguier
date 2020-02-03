@@ -32,6 +32,22 @@ urlpatterns = [
     path('pet-to-you', views.pet_to_you, name='pet-to-you'),
     path('design-challenge-template', views.design_challenge_template, name='design_challenge_template'),
     
+    #old pages
+    path('catrait', views.catrait, name='catrait'),
+    path('LeECO_Design_Challenge', views.LeECO_Design_Challenge, name='LeECO_Design_Challenge'),
+    path('fine_art', views.fine_art, name='fine_art'),
+    path('landscape_temp112560123254', views.landscape_temp112560123254, name='landscape_temp112560123254'),
+    path('package', views.package, name='package'),
+    path('skype', views.skype, name='skype'),
+    path('infographics', views.infographics, name='infographics'),
+    path('leantaas_mock_up', views.leantaas_mock_up, name='leantaas_mock_up'),
+    path('personal_branding', views.personal_branding, name='personal_branding'),
+    path('wabash', views.wabash, name='wabash'),
+    path('chummy', views.chummy, name='chummy'),
+    path('landscape', views.landscape, name='landscape'),
+    path('leantaas', views.leantaas, name='leantaas'),
+    path('product_design', views.product_design, name='product_design'),
+    
 #    Login pages:
 #    path('login', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
 #    path('logout', auth_views.LogoutView.as_view(next_page='login'), name='logout'),

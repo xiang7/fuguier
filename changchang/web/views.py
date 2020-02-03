@@ -667,3 +667,48 @@ def design_challenge_template(request):
                 ]
             }]}
 	return render(request, 'project.html', context)
+
+
+### Old pages
+
+def catrait(request):
+    return render(request, 'old/catrait.html')
+
+def LeECO_Design_Challenge(request):
+    return render(request, 'old/LeECO_Design_Challenge.html')
+
+def fine_art(request):
+    return render(request, 'old/fine_art.html')
+
+def landscape_temp112560123254(request):
+    return render(request, 'old/landscape_temp112560123254.html')
+
+def package(request):
+    return render(request, 'old/package.html')
+
+def skype(request):
+    return render(request, 'old/skype.html')
+
+def infographics(request):
+    return render(request, 'old/infographics.html')
+
+def leantaas_mock_up(request):
+    return render(request, 'old/leantaas-mock-up.html')
+
+def personal_branding(request):
+    return render(request, 'old/personal_branding.html')
+
+def wabash(request):
+    return render(request, 'old/wabash.html')
+
+def chummy(request):
+    return render(request, 'old/chummy.html')
+
+def landscape(request):
+    return render(request, 'old/landscape.html')
+
+def leantaas(request):
+    return render(request, 'old/leantaas.html')
+
+def product_design(request):
+    return render(request, 'old/product_design.html')

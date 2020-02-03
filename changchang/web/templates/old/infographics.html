@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mathfilters %}
+
+{% block content %}
+<!-- .......... Home Image .......... -->
+<div class="uk-grid uk-container-center uk-text-center">
+    <div style="height:100px"></div>
+    <div class="uk-width-1-1">
+        <p class="title-text">Infographics</p>
+    </div>
+    <br>
+    <br>
+    <div class="uk-width-9-10 uk-container-center">
+        <p class="font-el"><i>Relationship Map • Resume • Transportation Analysis • Ecology Map • Demographics Map</i></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="uk-width-small-9-10 uk-width-medium-4-10 uk-width-large-4-10 uk-container-center uk-grid font-el">
+        <div class="uk-width-1-2 uk-padding-remove">
+            <p>CATEGORY
+                <br>
+            <b>Infographics / Illustration / Landscape Arch.</b></p>
+        </div>
+        <div class="uk-width-1-2 uk-padding-remove" style="border-left:1px solid #000">
+            <p>DATE
+            <br>
+            <b>Since 2012</b></p>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- .......... Home Image .......... -->
+<div class="uk-clear-fix">
+    <img src="{% static 'old_image/1_HOME' %}" alt="">
+</div>
+
+<!-- .......... Infographics intro .......... -->
+<div style="color:#555" id="resume">
+    <br>
+    <br>
+    <br>
+    <h1 class="uk-text-large uk-text-center font-el title-text" style="color:#555">Infographics</h1>
+    <br>
+    <br>
+    <div class="uk-grid"> 
+        <div class="uk-width-medium-1-2 uk-width-large-1-2 uk-width-small-8-10 uk-container-center">
+            <p class="uk-text-left uk-text-large font-el" style="font-size:120%">
+                Changchang believes that infographics is an efficient way for communication and decision making.
+                <br>
+                <br>
+                She has used infographics to study the relationship between designers and clients, aided the text in one of her resumes, analyzed 3 different airports along Route 45 in IL…
+                <br>
+                <br>
+                The research can be shown by doing infographics, and in turn infographics can help people to decide what aspect needs more research.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<!-- .......... 1 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/2_INTRO.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... Airport intro .......... -->
+<div style="color:#555" id="resume">
+    <br>
+    <br>
+    <br>
+    <h1 class="uk-text-large uk-text-center font-el title-text" style="color:#555">The Study of Main Airports</h1>
+    <br>
+    <br>
+    <h1 class="uk-text-large uk-text-center font-el title-text" style="color:#555">Along Route 45</h1>
+    <br>
+    <br>
+    <div class="uk-grid"> 
+        <div class="uk-width-medium-1-2 uk-width-large-1-2 uk-width-small-8-10 uk-container-center">
+            <p class="uk-text-left uk-text-large font-el" style="font-size:120%">
+                Based on the research of transportation system along Route 45, info graphics are made to visualize the numbers and findings.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<!-- .......... 2 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/3_AIRPORT.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 3 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/4_AIRPORT.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 4 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/5_natural45.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 5 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/6_stats45.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+{% endblock %}

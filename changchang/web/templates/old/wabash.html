@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load mathfilters %}
+
+{% block content %}
+<!-- .......... Home Image .......... -->
+<div class="uk-clear-fix">
+    <img src="{% static 'old_image/wa_0_home.jpg' %}" alt="">
+</div>
+
+ <!-- .......... Airport intro .......... -->
+<div style="color:#555" id="visualization">
+    <br>
+    <br>
+    <br>
+    <h1 class="uk-text-large uk-text-center font-el title-text" style="color:#555">The Portrayal of Wabash River</h1>
+    <br>
+    <br>
+    <div class="uk-grid"> 
+        <div class="uk-width-medium-1-2 uk-width-large-1-2 uk-width-small-8-10 uk-container-center">
+            <p class="uk-text-left uk-text-large font-el" style="font-size:120%">
+                This is a project which lasts doe one semester in design studio. The goal is to portray Wabash River as the stateline in an unconventional way. By going through the process of SURVEY, INDEX, TIMELINE, NARRATIVE and FUTURE—altogether five phases, one is supposed to have a thorough understanding of Wabash River and the regions nearby.
+                <br>
+                <br>
+                All graphic drawings are based on sound study and research. The skill of visualizing information has been improved significantly. And the drawings include: informational map, collage of the main elements; timeline of the sequences of events and objects; three most important parts of that region with multiple eras together and storyboard of imagination about the future.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<!-- .......... 1 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_2_intro.jpg' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 2 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_3_timeline' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 3 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_4_river' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 4 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_5_farm' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 5 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_6_town' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+
+<!-- .......... 5 .......... -->
+<div class="uk-slidenav-position" data-uk-slideshow>
+    <ul class="uk-slideshow uk-slider-full-screen uk-grid-width-medium-1-1 uk-grid-width-large-1-1">
+        <li class="uk-active uk-vertical-align uk-text-center">
+            <img src="{% static 'old_image/wa_7_future' %}" class="uk-vertical-align-center">
+        </li>
+    </ul>
+</div>
+{% endblock %}

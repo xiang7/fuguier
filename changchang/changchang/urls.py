@@ -18,6 +18,7 @@ from django.urls import path
 from web import views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -55,4 +56,4 @@ urlpatterns = [
     
 #    Admin pages:
 #    path('admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

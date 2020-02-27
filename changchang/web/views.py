@@ -384,7 +384,7 @@ def roku_zones(request):
                         },
                     {
                         'prologues': ['Editorial Zones - Explorations of Tile Guidelines'],
-                        'filename': 'roku-zones-editorial.jpg',
+                        'filename': 'roku-zones-editorial-exploration.jpg',
                         'descriptions': ['Reference of “existing” collection tiles at that time.']
                         },
                     {'filename': 'roku-zones-mild.jpg'},
@@ -392,7 +392,7 @@ def roku_zones(request):
                     {'filename': 'roku-zones-wild.jpg'},
                     {
                         'prologues': ['Editorial Zones - Tiles'],
-                        'filename': '',
+                        'filename': 'roku-zones-transformers.jpg',
                         },
                     {'filename': 'roku-zones-tiles-2.jpg'}
 					]
@@ -625,6 +625,82 @@ def pet_to_you(request):
                     'descriptions': ['Like all of the premium brands, PETiTAG is all about paying attention to details. Every small part of the product and package is thoughtfully well designed.'],
                     'images': [{'filename': 'petoyou-box.jpg'}, {'filename': 'petoyou-box-9.jpg'}]
                     },
+                ]
+            }]}
+	return render(request, 'project.html', context)
+
+def personalized_activation(request):
+	context = {
+        'contents': [{
+            'title': 'Personalized Activation',
+            'subtitle': 'personalize users’ activation experience | 2019',
+            'titlebackgroundimage' : 'linear-gradient(to top, #662d91, #8e5cfa);',
+            'featurecolor': '#662d91',
+            'primarycolor': '#fff',
+            'categories': ['UI/UX'],
+            'overviewlines': [
+                '“In the past, when you set up your Roku you possibly got a handful of Roku channel suggestions that you wanted to add. Roku has updated its set-up process to help you find a huge catalog of Roku channels based on your interests.”—— Cord Cutters News'
+                ],
+            'bannerimage': {'filename':'personalized_activation.png', 'height':10},
+            'demos': [
+                {
+                    'title': 'Previous Flow',
+                    'descriptions': ['In the previous flow, all users will go through the same steps with the same channels being pre-selected. Also it didn’t offer the opportunity to signup offers instantly.'],
+                    'images': [{'filename': 'personalized_activation_previous_flow.png'}]
+                    },
+                {
+                    'title': 'Opportunities for Improvements',
+                    'descriptions': ['While previous design worked fine, there’s always room for improvements. Also with all the new features and products coming, the actvation flow needs to be tweaked to embrace all of them.'],
+                    'images': [
+                        {
+                            'filename': 'personalized_activation_opporunities.png',
+                            'descriptions': ['^ The goal of the step is simple—having users put in link code that’s on TV screen. The screen should not look any harder than it actually is.']
+                            },
+                        {
+                            'filename': 'personalized_activation_opportunities2.png',
+                            'descriptions': ['^ The order of the options should follow certain logic; either based on popularity or alphabet']
+                            },
+                        {
+                            'filename': 'personalized_activation_opportunities3.png',
+                            'descriptions': ['^ Though arranged by popularity, user groups vary when it comes to preferences. The low discoveribilty of less popular channels leads to a worse cycle for them.']
+                            },
+                        {
+                            'filename': 'personalized_activation_opportunities4.png',
+                            'descriptions': ['^ Neither the artwork nor the text has highlighted what’s special about the specific provider; it’s not very informational to users ']
+                            },
+                        {
+                            'filename': 'personalized_activation_opportunities5.png',
+                            }
+                        ]
+                    },
+                {
+                    'title': 'Personalized Activation Flow',
+                    'descriptions': ['Every customer is different. A more customized experience is more likely leading to higher engament. Screenshots in production shown below.'],
+                    'images': [
+                        {
+                            'filename': 'personalized_activation_flow.png',
+                            'descriptions': ['^ The first few steps have inherited the elements in WIP web UI component library so that the whole experience is more on-brand; the next step is to improve the UX design.']
+                            },
+                        {
+                            'filename': 'personalized_activation_flow2.png',
+                            'descriptions': ['^ In the new design, we added up to 5 survey questions to get to know each individual better; and collect certain information that’ll be helpful in finding business opportunities. ']
+                            },
+                        {
+                            'filename': 'personalized_activation_flow3.png',
+                            'descriptions': ['^ With the help from Machine Learning and Data Analyst team, we’re recommending the channels and trial offers case-by-case; the goal is to help users find what they like sooner; hence channels they like are more likely to appear above fold on home screen; and eventually increase the streaming hours']
+                            },
+                        ]
+                    },
+                {
+                    'title': 'Process and Outcome',
+                    'descriptions': ['As simple as the current flow seems to be, almost every design decision through the process has been vetted by A/B test; and supported by solid data. The lessons and insights learned in this projects could be or even being applied in other areas.'],
+                    'images': [
+                        {'filename': 'personalized_activation_outcome.png'},
+                        {'filename': 'personalized_activation_outcome2.png', 'descriptions': ['^ Guidelines being created for partners']},
+                        {'filename': 'personalized_activation_outcome3.png'},
+                        {'filename': 'personalized_activation_outcome4.png'}
+                        ]
+                    }
                 ]
             }]}
 	return render(request, 'project.html', context)

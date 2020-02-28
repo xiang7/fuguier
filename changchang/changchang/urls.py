@@ -24,8 +24,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('index', views.index, name='index'),
     path('design-challenge', views.design_challenge, name='design_challenge'),
-    path('hackathon', views.hackathon, name='hackathon'),
     path('cinema-4d', views.cinema_4d, name='cinema-4d'),
+    path('hackathon', views.hackathon, name='hackathon'),
     path('roku-themes', views.roku_themes, name='roku-themes'),
     path('guest-mode', views.guest_mode, name='guest-mode'),
     path('roku-zones', views.roku_zones, name='roku-zones'),
@@ -36,7 +36,7 @@ urlpatterns = [
     
     #old pages
     path('catrait', views.catrait, name='catrait'),
-    path('LeECO_Design_Challenge', views.LeECO_Design_Challenge, name='LeECO_Design_Challenge'),
+    path('LeECO_Design_Challenge', views.LeECO_Design_Challenge, name='LeECO_Design_Challenge'), #hulu
     path('fine_art', views.fine_art, name='fine_art'),
     path('landscape_temp112560123254', views.landscape_temp112560123254, name='landscape_temp112560123254'),
     path('package', views.package, name='package'),

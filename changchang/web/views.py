@@ -132,10 +132,6 @@ def design_challenge(request):
 			],
 		'demos': [
 			{
-				'title': 'Design A Font, AND Make It to A Logo (Plant Tech)',
-				'images': [{'filename':'project-yizhi.png'}],
-				},
-			{
 				'title': 'Create an Illustration, AND Design It Into A Weather App',
 				'images': [{'filename':'project-weather-app.png'}],
 				},

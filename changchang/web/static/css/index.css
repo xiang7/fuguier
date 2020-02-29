@@ -46,3 +46,7 @@ a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:ac
     font-size:90%;
     margin-top: 0px;
 }
+
+img {
+    width:100%;
+}

@@ -48,7 +48,9 @@ urlpatterns = [
     path('chummy', views.chummy, name='chummy'),
     path('landscape', views.landscape, name='landscape'),
     path('leantaas', views.leantaas, name='leantaas'),
-    path('product_design', views.product_design, name='product_design'),
+    
+#    Removed pages:    
+#    path('product_design', views.product_design, name='product_design'),
     
 #    Login pages:
 #    path('login', auth_views.LoginView.as_view(template_name='login.html'), name='login'),

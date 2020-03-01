@@ -21,15 +21,6 @@
     background-image: url(../image/Home_Collage_new.png);
 }
 
-a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:active {
-	background-color: #ea4c89;
-	color: #ffffff;
-	border-radius: 20px;
-	padding: 10px 20px 10px 20px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
 #about {
 	background-image: linear-gradient(305deg, #ca67b3, #ea4c89);
 }
@@ -45,4 +36,28 @@ a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:ac
 .project-description {
     font-size:90%;
     margin-top: 0px;
+}
+
+a.link-button, a.link-button:link, a.link-button:visited, a.link-button:hover, a.link-button:active {
+	background-color: #ea4c89;
+	color: #ffffff;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.uk-subnav > .uk-active > * {
+    background-color: #fff;
+    color: #ed2d8e;
+    border: 1px solid #ed2d8e;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .2);
+}
+
+.uk-subnav > * > a {
+    background-color: #fff;
+    color: #5D5D5D;
+    border: 1px solid #5D5D5D;
+    border-radius: 15px;
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, .2);
 }

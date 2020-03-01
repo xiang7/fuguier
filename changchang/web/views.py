@@ -11,108 +11,129 @@ from django.template.response import TemplateResponse
 def index(request):
     context = {
         'thumbnails' : [{
-            'title': 'Daily Design Challenge',
-            'subtitle': 'from uisdc.com | 2017',
-            'image': 'thumbnail-design-challenge.jpg',
-            'url': '/design-challenge'
+            'title': 'Roku Themes',
+            'subtitle': 'seasonal & sellable themes | 2017-2018',
+            'image': 'thumbnail-roku-themes.jpg',
+            'url': '/roku-themes',
+            'filter': 'base-filter, ui-ux-filter, all-filter'
         }, {
             'title': 'Cinema 4D',
             'subtitle': 'from uisdc.com | 2019',
             'image': 'thumbnail-cinema-4d.jpg',
-            'url': '/cinema-4d'
-        }, {
-            'title': 'Hackathon',
-            'subtitle': 'of Roku Inc. | 2017',
-            'image': 'thumbnail-hackathon.jpg',
-            'url': '/hackathon'
-        }, {
-            'title': 'PEToYOU',
-            'subtitle': 'co-founded startup | 2014',
-            'image': 'thumbnail-petoyou.jpg',
-            'url': '/pet-to-you'
-        }, {
-            'title': 'Roku Guest Mode',
-            'subtitle': 'advanced feature | 2018',
-            'image': 'thumbnail-guest-mode.jpg',
-            'url': '/guest-mode'
-        }, {
-            'title': 'Visual Voice Search',
-            'subtitle': 'Roku’s multi-modal search | 2017',
-            'image': 'thumbnail-voice-search.jpg',
-            'url': '/voice-search'
-        }, {
-            'title': 'Roku Zones',
-            'subtitle': 'content collections | 2019',
-            'image': 'thumbnail-roku-zones.jpg',
-            'url': '/roku-zones'
-        }, {
-            'title': 'Roku Themes',
-            'subtitle': 'seasonal & sellable themes | 2017-2018',
-            'image': 'thumbnail-roku-thumes.jpg',
-            'url': '/roku-themes'
+            'url': '/cinema-4d',
+            'filter': 'base-filter, ui-ux-filter, all-filter'
         }, {
             'title': 'Personalized Activation',
             'subtitle': 'seasonal & sellable themes | 2017-2018',
             'image': 'thumbnail-personalized-activation.jpg',
-            'url': '/personalized_activation'
-        }, { # Old projects
-            'title': 'Skype Redesign',
-            'subtitle': 'conceptual design | 2015',
-            'image': 'thumbnail-skype.jpg',
-            'url': '/skype'
+            'url': '/personalized_activation',
+            'filter': 'base-filter, ui-ux-filter, branding-filter, all-filter'
+        }, {
+            'title': 'Roku Guest Mode',
+            'subtitle': 'advanced feature | 2018',
+            'image': 'thumbnail-guest-mode.jpg',
+            'url': '/guest-mode',
+            'filter': 'base-filter, ui-ux-filter, branding-filter, all-filter'
+        }, {
+            'title': 'Visual Voice Search',
+            'subtitle': 'Roku’s multi-modal search | 2017',
+            'image': 'thumbnail-voice-search.jpg',
+            'url': '/voice-search',
+            'filter': 'base-filter, ui-ux-filter, branding-filter, all-filter'
+        }, {
+            'title': 'Daily Design Challenge',
+            'subtitle': 'from uisdc.com | 2017',
+            'image': 'thumbnail-design-challenge.jpg',
+            'url': '/design-challenge',
+            'filter': 'base-filter, ui-ux-filter, branding-filter, all-filter'
+        }, {
+            'title': 'PEToYOU',
+            'subtitle': 'co-founded startup | 2014',
+            'image': 'thumbnail-petoyou.jpg',
+            'url': '/pet-to-you',
+            'filter': 'base-filter, all-filter'
+        }, {
+            'title': 'Hackathon',
+            'subtitle': 'of Roku Inc. | 2017',
+            'image': 'thumbnail-hackathon.jpg',
+            'url': '/hackathon',
+            'filter': 'base-filter, all-filter'
+        }, {
+            'title': 'Roku Zones',
+            'subtitle': 'content collections | 2019',
+            'image': 'thumbnail-roku-zones.jpg',
+            'url': '/roku-zones',
+            'filter': 'base-filter, all-filter'
         }, {
             'title': 'hulu Redesign',
             'subtitle': 'design exercise | 2016',
             'image': 'thumbnail-hulu.jpg',
-            'url': '/LeECO_Design_Challenge'
+            'url': '/LeECO_Design_Challenge',
+            'filter': 'base-filter, all-filter'
         }, {
             'title': 'Fine Art',
             'subtitle': 'hand drawings | since 2008',
             'image': 'thumbnail-fine-art.jpg',
-            'url': '/fine_art'
+            'url': '/fine_art',
+            'filter': 'base-filter, all-filter'
+        }, {
+            'title': 'Skype Redesign',
+            'subtitle': 'conceptual design | 2015',
+            'image': 'thumbnail-skype.jpg',
+            'url': '/skype',
+            'filter': 'base-filter, all-filter'
         }, {
             'title': 'banmi.com',
             'subtitle': 'experience sharing (before airbnb) | 2015',
             'image': 'thumbnail-banmi.jpg',
-            'url': '/chummy'
-        }, {
-            'title': 'Wabash Visualization',
-            'subtitle': 'from research to visualization | 2013',
-            'image': 'thumbnail-wabash.jpg',
-            'url': '/wabash'
-        }, {
-            'title': 'Package Design',
-            'subtitle': 'tea, candy etc. | since 2008',
-            'image': 'thumbnail-package.jpg',
-            'url': '/package',
-            'color': '#7c8a7d'
-        }, {
-            'title': 'Infographics',
-            'subtitle': 'data visualization | since 2012',
-            'image': 'thumbnail-infographics.jpg',
-            'url': '/infographics',
-        }, {
-            'title': 'Landscape Architecture',
-            'subtitle': 'concept to construction | since 2008',
-            'image': 'thumbnail-landscape.jpg',
-            'url': '/landscape'
-        }, {
-            'title': 'Personal Branding',
-            'subtitle': 'changchang liu | 2016',
-            'image': 'thumbnail-personal-branding.jpg',
-            'url': '/personal_branding',
-            'color': '#fe339c'
-        }, {
-            'title': 'LeanTaaS Redesign',
-            'subtitle': 'website re-skin | 2016',
-            'image': 'thumbnail-leantaas.jpg',
-            'url': '/leantaas'
+            'url': '/chummy',
+            'filter': 'all-filter'
         }, {
             'title': 'CATrait',
             'subtitle': 'cat’s fashion & beyond | since 2015',
             'image': 'thumbnail-catrait.jpg',
             'url': '/catrait',
-            'color': '#a6988f'
+            'color': '#a6988f',
+            'filter': 'all-filter'
+        }, {
+            'title': 'Personal Branding',
+            'subtitle': 'changchang liu | 2016',
+            'image': 'thumbnail-personal-branding.jpg',
+            'url': '/personal_branding',
+            'color': '#fe339c',
+            'filter': 'all-filter'
+        }, {
+            'title': 'Package Design',
+            'subtitle': 'tea, candy etc. | since 2008',
+            'image': 'thumbnail-package.jpg',
+            'url': '/package',
+            'color': '#7c8a7d',
+            'filter': 'all-filter'
+        }, {
+            'title': 'Wabash Visualization',
+            'subtitle': 'from research to visualization | 2013',
+            'image': 'thumbnail-wabash.jpg',
+            'url': '/wabash',
+            'hidden' : True,
+            'filter': 'all-filter'
+        }, {
+            'title': 'Infographics',
+            'subtitle': 'data visualization | since 2012',
+            'image': 'thumbnail-infographics.jpg',
+            'url': '/infographics',
+            'filter': 'all-filter'
+        }, {
+            'title': 'Landscape Architecture',
+            'subtitle': 'concept to construction | since 2008',
+            'image': 'thumbnail-landscape.jpg',
+            'url': '/landscape',
+            'filter': 'all-filter'
+        }, {
+            'title': 'LeanTaaS Redesign',
+            'subtitle': 'website re-skin | 2016',
+            'image': 'thumbnail-leantaas.jpg',
+            'url': '/leantaas',
+            'filter': 'all-filter'
         }]
     }
     return render(request, 'index.html', context)

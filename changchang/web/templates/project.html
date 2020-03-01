@@ -2,6 +2,10 @@
 {% load staticfiles %}
 {% load mathfilters %}
 
+{% block head %}
+<script src="{% static 'js/changchang/project.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 {% for c in contents %}
 
@@ -117,7 +121,7 @@
             {% endfor %}
         </p>
     {% endif %}
-    <img class="uk-margin-bottom" src="{% static 'image/'|add:image.filename %}">
+    <img class="uk-margin-bottom project-img" src="{% static 'image/'|add:image.filename %}">
     {% if image.descriptions and image.descriptions|length > 0 %}
         <p class="uk-text-center uk-text-small uk-margin-remove" style='color:#9b9b9b'>
             {% for description in image.descriptions %}

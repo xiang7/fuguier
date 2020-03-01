@@ -259,7 +259,7 @@ def hackathon(request):
                             'descriptions': ['8 characters are available for users to pick from. For potential revenue chance, “big cats”, with stonger hittign power, are available for purchase.']},
                           {'filename':'roku_hackathon_character_animation.png',
                            'descriptions':['Characters are provided as sprits to engineers for animation.']},
-                          {'filename':'roku_hackathon_screen_shot.png',
+                          {'filename':'roku_hackathon_screen_shot.gif',
                            'descriptions':['What do cats like to destroy? Furnitures!',
                                            'In this game, me as the designer created objects in difference shapes and sizes;',
                                            'the engineers defined the weights of them accordingly.',
@@ -340,7 +340,7 @@ def roku_themes(request):
 				'descriptions': ['Every year, during holiday season, Roku will release a special winter theme to delight our users. It is the seasonal theme that will be on users’ devices for the longest period of time.'],
 				'images': [
 					{'filename': 'roku_themes_winter_rating.png'},
-                    {'filename': ''},
+                    {'filename': 'roku-winter-theme.gif'},
                     {'prologues':['The overall style is generally following the 2018 Holiday Campaign Guideline'], 'filename': 'roku_themes_winter_guideline.png'},
                     {'prologues':['The theme is animated, with 3 scenes rotating'], 'filename': 'roku_themes_scenes.jpg'}
 					]
@@ -523,7 +523,7 @@ def roku_zones(request):
             {
                 'title': 'Outcome',
                 'images': [
-                    
+                    {'filename': 'roku-zones-outcome.jpg'}
                 ]
             }
 			]

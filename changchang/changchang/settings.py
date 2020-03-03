@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mia8zh24ab_kl0%*l47dm&+mclw*6#m+5hgcwnvnk$1v=eu%j&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["changchangl.com", "localhost"]
 
@@ -118,9 +118,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = '/home/ec2-user/fuguier-static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'web/static'), )
-# STATIC_ROOT = ''
 
 # Added settings
 LOGIN_URL = '/login'

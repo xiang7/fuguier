@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mia8zh24ab_kl0%*l47dm&+mclw*6#m+5hgcwnvnk$1v=eu%j&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["changchangl.com", "localhost"]
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'changchang.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'web/templates/')],
+        'DIRS': [os.path.join(BASE_DIR,'web/templates/'), os.path.join(BASE_DIR,'web/templates/old/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

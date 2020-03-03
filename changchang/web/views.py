@@ -139,19 +139,7 @@ def index(request):
     return render(request, 'index.html', context)
 
 def design_challenge(request):
-	context = {
-        'contents': [{
-		'title': 'Daily Design Challenge',
-		'subtitle': 'from uisdc.com | 2017',
-		'featurecolor': '#ff6000',
-		'primarycolor': '#fff',
-		'categories': ['UI / UX', 'illustration'],
-		'overviewlines': [
-			'As a designer, the last thing I want to see is that I’ve lost passion in designing; or stopped being curious about new trends and techiniques.',
-			'I was thirlled discovering the daily design challenge held by uisdc.com. Designers from all over the world (US, UK, China, Norway...) would take the same design challenge, and then have a session looking at everyone’s approaches.',
-			'Loved it!'
-			],
-		'demos': [
+    demos = [
 			{
 				'title': 'Create an Illustration, AND Design It Into A Weather App',
 				'images': [{'filename':'project-weather-app.png'}],
@@ -187,34 +175,49 @@ def design_challenge(request):
 			{
 				'title': 'Design a Set of Objects AND Make Them Into a Scene',
 				'images': [{'filename':'project-combo-mono.png'}],
-				},
-			{
-				'title': 'Apply Colors to The Scene Created in #10',
-				'images': [{'filename':'project-combo-color.png'}],
-				},
-			{
-				'title': 'Draw An Axe, Pay Attention to Textures Different Mateials',
-				'images': [{'filename':'project-indian-axe-rendering.png'}],
-				},
-			{
-				'title': 'Design A Set of Icons for Mobile Interface',
-				'images': [{'filename':'project-mobile-icon.gif'},{'filename':'project-mobile-icon-camera.png'},{'filename':'project-mobile-icon-settings.png'},{'filename':'project-mobile-icon-contacts.png'},{'filename':'project-mobile-icon-email.png'}],
-				},
-			{
-				'title': 'Based on #13, Design An Unconventional Unlocking Experience',
-				'images': [{'filename':'project-mobile-unlocking.png'}],
-				},
-			{
-				'title': 'Pick an App, AND Redesign its Popup Dialog',
-				'images': [{'filename':'project-mobile-popup.png'}],
-				},
-			{
-				'title': 'Do An Illustration!',
-				'images': [{'filename':'project-illustration-group-photo.png'}],
-				},
-			]
-		}]}
-	return render(request, 'project.html', context)
+				}]
+    lastIndex = len(demos)
+    demos.extend(
+        [{
+            'title': 'Apply Colors to The Scene Created in #' + str(lastIndex),
+            'images': [{'filename':'project-combo-color.png'}],
+            },
+        {
+            'title': 'Draw An Axe, Pay Attention to Textures Different Mateials',
+            'images': [{'filename':'project-indian-axe-rendering.png'}],
+            },
+        {
+            'title': 'Design A Set of Icons for Mobile Interface',
+            'images': [{'filename':'project-mobile-icon.gif'},{'filename':'project-mobile-icon-camera.png'},{'filename':'project-mobile-icon-settings.png'},{'filename':'project-mobile-icon-contacts.png'},{'filename':'project-mobile-icon-email.png'}],
+            },
+        {
+            'title': 'Based on #13, Design An Unconventional Unlocking Experience',
+            'images': [{'filename':'project-mobile-unlocking.png'}],
+            },
+        {
+            'title': 'Pick an App, AND Redesign its Popup Dialog',
+            'images': [{'filename':'project-mobile-popup.png'}],
+            },
+        {
+            'title': 'Do An Illustration!',
+            'images': [{'filename':'project-illustration-group-photo.png'}],
+            }
+        ])
+    context = {
+        'contents': [{
+		'title': 'Daily Design Challenge',
+		'subtitle': 'from uisdc.com | 2017',
+		'featurecolor': '#ff6000',
+		'primarycolor': '#fff',
+		'categories': ['UI / UX', 'illustration'],
+		'overviewlines': [
+			'As a designer, the last thing I want to see is that I’ve lost passion in designing; or stopped being curious about new trends and techiniques.',
+			'I was thirlled discovering the daily design challenge held by uisdc.com. Designers from all over the world (US, UK, China, Norway...) would take the same design challenge, and then have a session looking at everyone’s approaches.',
+			'Loved it!'
+			],
+		'demos': demos,
+        }]}
+    return render(request, 'project.html', context)
 
 def hackathon(request):
 	context = {
@@ -241,10 +244,7 @@ def hackathon(request):
                                  '- By 2019, the percentage is projected to be 50%',
                                  '- In home parties, not all guests can get involved in the same game due to limited number of controllers',
                                  '- Web games could be projected to TVs; and mobile devices could serve as game controllers'],
-				'images': [
-					{'filename': 'roku_hackathon_problem_2016.png'},
-                    {'filename': 'roku_hackathon_problem_2019.png'},
-					]
+				'images': [{'filename': 'roku_hackathon_problem_2016.png'}]
 				},
             {
                 'title': 'How It Works',
@@ -348,21 +348,21 @@ def roku_themes(request):
 			{
 				'title': '2018 New Year’s Eve Theme',
 				'images': [
-					{'filename': 'roku_themes_new_year_theme.jpg'},
+					{'filename': 'roku_themes_new_year_theme.png'},
                     {'filename': 'roku_themes_new_year_screens.jpg'}
 					]
 				},
             {
                 'title': '2018 4th of July',
                 'images': [
-                    {'filename': 'roku_themes_new_year.jpg'},
+                    {'filename': 'roku_themes_new_year.png'},
                     {'filename': 'roku_themes_fourth_july_explorations.jpg', 'descriptions': ['explorations through the process']}
                     ]
                 },
             {
 				'title': '2017 New Year’s Eve Theme',
 				'images': [
-					{'filename': 'roku_themes_new_year_2017.jpg'},
+					{'filename': 'roku_themes_new_year_2017.png'},
                     {'filename': 'roku_themes_new_year_2017_screens.jpg'}
 					]
 				},
@@ -370,7 +370,7 @@ def roku_themes(request):
 				'title': 'My Personal Sellable Themes - Pet House',
 				'images': [
 					{'filename': 'roku_themes_pet_house_rating.png'},
-                    {'filename': 'roku_themes_pet_house_theme.jpg'},
+                    {'filename': 'roku_themes_pet_house_theme.png'},
                     {'filename': 'roku_themes_pet_house_screens.jpg'}
 					]
 				},
@@ -378,7 +378,7 @@ def roku_themes(request):
 				'title': 'My Personal Sellable Themes - Panda Wonderland',
 				'images': [
 					{'filename': 'roku_themes_panda_ratings.png'},
-                    {'filename': 'roku_themes_panda_theme.jpg'},
+                    {'filename': 'roku_themes_panda_theme.png'},
                     {'filename': 'roku_themes_panda_screens.jpg'}
 					]
 				},
@@ -484,7 +484,7 @@ def roku_zones(request):
 						},
                     {
                         'prologues': ['Matrix of Strategy'],
-                        'filename': 'roku-zones-analysis-2.jpg'
+                        'filename': 'roku-zones-analysis-2.png'
                         }
 					]
 				},

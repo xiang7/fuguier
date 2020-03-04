@@ -455,6 +455,13 @@ def guest_mode(request):
                           ]
                 },
             {
+                'title': 'Valentine’s Day Theme',
+                'descriptions': ['When think of Valentine’s Day, what usually comes to our minds are red color and hearts. It’s nice especially when you have someone to celebrate that day with. But when it comes to a theme that’s facing all the audiences, the designer needs to be more thoughtful. With such empathy in mind, I explored three directions. '],
+                'images': [{'filename': 'roku_theme_valentine1.jpg'},
+                          {'filename': 'roku_theme_valentine2.jpg'},
+                          {'filename': 'roku_theme_valentine3.jpg'}]
+                },
+            {
                 'title': 'Outcome',
                 'descriptions': ['Due to some unexpected partner hurdles, the design shown above can’t be released as the very 1st version. Instead, we had to go to the safer route using existing default theme and use the name “Auto Sign Out Mode”.', '',
                                  'The ultimate goal, however, is still utilizing the design proposed above to showcase the delightful part of traveling/ vacation; and call the feature “Guest Mode”.', '',

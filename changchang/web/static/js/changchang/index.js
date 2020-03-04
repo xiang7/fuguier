@@ -36,11 +36,16 @@ $(window).ready(function (){
         shouldClickAboutLink = true;
     }
     
-    $('#see-more').click(function (){
+    $('#see-more').click(function() {
         // Decision was not to show the filters
 //        $('#work-filter-div').show();
         $('#see-more-button').hide();
         $('#all-filter-a').click();
+    });
+    
+    $('#about-see-more-link').click(function() {
+        $('#about-see-more-link').hide();
+        $('#about-detail-image').show();
     });
     
     setTimeout(function() {

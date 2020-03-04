@@ -68,14 +68,25 @@
 	<br>
     <h4 class="uk-text-large uk-text-center font-el title-text"><b style="color:#fff;">About</b></h4>
     <br>
-    <div class="uk-container-center" style="height:180px;width:180px"><img src="{% static 'image/portrait-thumbnail-new.jpg' %}" style="-webkit-clip-path:circle(50%); clip-path:circle(50%);"></div>
-    <div class="uk-grid uk-width-8-10 uk-container-center" style="border-radius:36px; background-color:#fff;box-shadow: 0 4px 30px 0 #961949;margin-top:-90px">
-        <div class="uk-width-medium-3-4 uk-width-large-3-4 uk-width-small-8-10 uk-container-center">
-            <p class="uk-text-left font-el" style="margin-top:118px;margin-bottom:118px;">Changchang is a self-motivated, versatile and passionate designer who’s been developing impactful design since 2008. She believes in egoless collaboration, unstoppable grit, the infinite exquisiteness...<br><br>
+    <div class="uk-container-center" style="height:120px;width:120px"><img src="{% static 'image/portrait-thumbnail-new.jpg' %}" style="-webkit-clip-path:circle(50%); clip-path:circle(50%);"></div>
+    <div class="uk-grid uk-width-8-10 uk-container-center" style="border-radius:36px; background-color:#fff;box-shadow: 0 4px 30px 0 #961949;margin-top:-60px">
+        <div class="uk-width-8-10 uk-width-small-3-4 uk-width-medium-3-4 uk-width-large-3-4 uk-container-center uk-text-center uk-padding-remove">
+            <p class="uk-text-left font-el" style="margin-top:80px;margin-bottom:0px;">
+                Changchang is a self-motivated, versatile and passionate designer who’s been developing impactful design since 2008. She believes in egoless collaboration, unstoppable grit, the infinite exquisiteness...<br><br>
             And above all, empathy.<br><br>
             Experienced in Product Design. Advanced skills in content/ media/ streaming platform design.<br><br>
             When I’m not working, I like spending time with my 👶🏻& 😸😾, cooking 👩🏻‍🍳, and painting 👩🏻‍🎨.
-                <b><a style="color:#ea4c89;text-decoration:underline;" href="{% static 'documents/20200302_changchang_resume.pdf' %}">SEE MORE</a></b></p>
+                <a id="about-see-more-link" style="color:#ea4c89;text-decoration:underline;font-weight:bold;">SEE MORE</a>
+            </p>
+            <div style="height: 7vh"></div>
+            <div id ="about-detail-image" style="display:none;">
+                <img src="{% static 'image/about-detail-image.jpg' %}" />
+                <div style="height: 7vh"></div>
+            </div>
+            <div>
+                <a class="link-button" href="{% static 'documents/20200302_changchang_resume.pdf' %}">DOWNLOWD RESUME</a>
+                <div style="height: 8vh"></div>
+            </div>
         </div>
     </div>
     <br><br>

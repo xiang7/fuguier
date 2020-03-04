@@ -383,6 +383,13 @@ def roku_themes(request):
 					]
 				},
             {
+                'title': 'Valentine’s Day Theme',
+                'descriptions': ['When think of Valentine’s Day, what usually comes to our minds are red color and hearts. It’s nice especially when you have someone to celebrate that day with. But when it comes to a theme that’s facing all the audiences, the designer needs to be more thoughtful. With such empathy in mind, I explored three directions. '],
+                'images': [{'filename': 'roku_theme_valentine1.jpg'},
+                          {'filename': 'roku_theme_valentine2.jpg'},
+                          {'filename': 'roku_theme_valentine3.jpg'}]
+                },
+            {
 				'title': 'Outcome',
                 'descriptions': ['Other than the themes being shown above, I’ve also worked on Brand Themes— for example, RCA Roku TV Theme; and some other sellable themes like Jungle in the Dark…',
                                  'It’s hard to tie KPIs to themes to measure the value; but bringing the delightful moments to users is invaluable :)']
@@ -453,13 +460,6 @@ def guest_mode(request):
                            {'filename': 'guest-mode-xml-1.jpg',
                            'descriptions': ['Code in xml that’s making the background scenes’ rotation possible']}
                           ]
-                },
-            {
-                'title': 'Valentine’s Day Theme',
-                'descriptions': ['When think of Valentine’s Day, what usually comes to our minds are red color and hearts. It’s nice especially when you have someone to celebrate that day with. But when it comes to a theme that’s facing all the audiences, the designer needs to be more thoughtful. With such empathy in mind, I explored three directions. '],
-                'images': [{'filename': 'roku_theme_valentine1.jpg'},
-                          {'filename': 'roku_theme_valentine2.jpg'},
-                          {'filename': 'roku_theme_valentine3.jpg'}]
                 },
             {
                 'title': 'Outcome',

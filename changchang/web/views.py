@@ -518,8 +518,8 @@ def roku_zones(request):
                         'descriptions': ['Reference of “existing” collection tiles at that time.']
                         },
                     {'filename': 'roku-zones-mild.jpg'},
-                    {'filename': 'roku-zones-med.jpg'},
-                    {'filename': 'roku-zones-wild.jpg'},
+                    {'filename': 'roku-zones-med.png'},
+                    {'filename': 'roku-zones-wild.png'},
                     {
                         'prologues': ['Editorial Zones - Tiles'],
                         'filename': 'roku-zones-transformers.jpg',

@@ -115,7 +115,12 @@
 {% for image in demo.images %}
 <div class="uk-container-center uk-width-3-4 uk-width-medium-1-2">
     {% if image.prologues and image.prologues|length > 0 %}
-        <p class="uk-text-center">
+        {% if image.prologuesAlignment %}
+            <p class="uk-text-{{ image.prologuesAlignment }}">
+        {% else %}
+            <p class="uk-text-center">
+        {% endif %}
+
             {% for prologue in image.prologues %}
             {{ prologue }} <br>
             {% endfor %}

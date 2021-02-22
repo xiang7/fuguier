@@ -11,6 +11,12 @@ from django.template.response import TemplateResponse
 def index(request):
     context = {
         'thumbnails' : [{
+            'title': 'Automatic Game Console Configuration',
+            'subtitle': 'for Roku TVs  | 2020-2021',
+            'image': 'game_console_tile.png',
+            'url': '/game_console_configuration',
+            'filter': 'base-filter, ui-ux-filter, all-filter'
+        }, {
             'title': 'Roku Themes',
             'subtitle': 'seasonal & sellable themes | 2017-2018',
             'image': 'thumbnail-roku-themes.jpg',
@@ -835,8 +841,103 @@ def personalized_activation(request):
             }]}
 	return render(request, 'project.html', context)
 
+def game_console_configuration(request):
+    context = {
+        'contents': [{
+            'title': 'Automatic Game Console Configuration',
+            'subtitle': 'advanced features for average users  | 2021',
+            'titlebackgroundimagewithcolor' : {'image':'game_console_background.png', 'color':'#270607'},
+            'featurecolor': '#4B0A08',
+            'primarycolor': '#fff',
+            'categories': ['UI/UX'],
+            'overviewlines': [
+                'Roku TVs, especially the newer models, have many advanced capabilities and features that are underused. Most of the users are not very tech savvy; and even to those who are—those capabilities and features are not very easy to be discovered.',
+                'The goal of this project is to improve gaming experience and require the least actions from users.'
+                ],
+            'bannerimage': {'filename':'game_console_logos.png', 'height':26, 'leadheight': 13},
+            'demos': [
+                {
+                    'title': 'Context, Design Principles & Goals',
+                    'images': [
+                        {
+                            'filename': 'game_console_context.png',
+                            'descriptions': ['Context']
+                            },
+                        {
+                            'filename': 'game_console_goals.png',
+                            'descriptions': ['Goals']
+                            },
+                        {
+                            'filename': 'game_console_principal.png',
+                            'descriptions': ['Design principles']
+                            }
+                        ]
+                    },
+                {
+                    'title': 'Improvements of the Setup Portion',
+                    'descriptions': ['Before the introduction of this feature, the setup flow is not dynamic accross all scenarios. Game console related options starts from #12 regardless, which requires a lot of scrolling from the users.'],
+                    'images': [
+                        {
+                            'filename': 'game_console_screenshot.png',
+                            'descriptions': ['Screenshot of the previous version, when a recgonizable game console is connected vs. nothing’s detected']
+                            },
+                        {
+                            'filename': 'game_console_selected_console.png',
+                            'descriptions': ['Proposed design, when a recognizable game console is detected']
+                            },
+                        {
+                            'filename': 'game_console_selected_nothing.png',
+                            'descriptions': ['Proposed design, when nothing is detected']
+                            }
+                        ]
+                    },
+                {
+                    'title': 'Improvements of the Post Setup Portion',
+                    'descriptions': ['Before the introduction of this feature, users will have to change the tiles and settings within each port manually when it comes to game consoles. This feature makes full use of the exisiting capabilities, hence to customize the tile and settings automatically.'],
+                    'images': [
+                        {
+                            'filename': 'game_console_post_setup.png',
+                            'descriptions': [
+                                'When a recognizable game console is plugged in,',
+                                'the tile will be changed to the game console icon and the text label will reflect the exact model name'
+                                ]
+                            },
+                        {
+                            'prologues': [
+                                'When users are entering the port in which a recognizable game console is connected,',
+                                'the interactions may vary given the specific situation.',
+                                ' ',
+                                '- Compatibility changes only',
+                                '- Compatibility changes + turn on game mode',
+                                '- Compatibility changes + picture mode change',
+                                '- Compatibility changes + picture mode change + turn on game mode',
+                                ],
+                            'prologuesAlignment': 'left',
+                            'filename': 'game_console_least_change.png',
+                            'descriptions': ['Least changes: compatibility changes only']
+                            },
+                        {
+                            'filename': 'game_console_most_change.png',
+                            'descriptions': ['Most changes: compatibility changes + picture mode change + turn on game mode']
+                            }
+                        ]
+                    },
+                {
+                    'title': 'Edge cases',
+                    'descriptions': ['As always, though rare, there’re edge cases and design solutions to which are needed.'],
+                    'images': [{'filename': 'game_console_edge_case.png'}]
+                    },
+                {
+                    'title': 'Next Steps',
+                    'descriptions': ['PMs are coordinating with game console companies and TV partners on using the actual game console logos for the input tiles. Stay tuned.'],
+                    'images': [{'filename': 'game_console_bitmap.png'}]
+                    },
+                ]
+            }]}
+    return render(request, 'project.html', context)
+
 def design_challenge_template(request):
-	context = {
+    context = {
         'contents': [{
             'title': 'title text',
             'subtitle': 'subtitle text',
@@ -872,8 +973,7 @@ def design_challenge_template(request):
                     },
                 ]
             }]}
-	return render(request, 'project.html', context)
-
+    return render(request, 'project.html', context)
 
 ### Old pages
 

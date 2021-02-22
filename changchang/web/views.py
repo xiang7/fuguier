@@ -87,13 +87,7 @@ def index(request):
             'subtitle': 'hand drawings | since 2008',
             'image': 'thumbnail-fine-art.jpg',
             'url': '/fine_art',
-            'filter': 'base-filter, all-filter'
-        }, {
-            'title': 'Skype Redesign',
-            'subtitle': 'conceptual design | 2015',
-            'image': 'thumbnail-skype.jpg',
-            'url': '/skype',
-            'filter': 'base-filter, all-filter'
+            'filter': 'all-filter'
         }, {
             'title': 'banmi.com',
             'subtitle': 'experience sharing (before airbnb) | 2015',
@@ -106,13 +100,6 @@ def index(request):
             'image': 'thumbnail-catrait.jpg',
             'url': '/catrait',
             'color': '#a6988f',
-            'filter': 'all-filter'
-        }, {
-            'title': 'Personal Branding',
-            'subtitle': 'changchang liu | 2016',
-            'image': 'thumbnail-personal-branding.jpg',
-            'url': '/personal_branding',
-            'color': '#fe339c',
             'filter': 'all-filter'
         }, {
             'title': 'Package Design',
@@ -129,22 +116,10 @@ def index(request):
             'hidden' : True,
             'filter': 'all-filter'
         }, {
-            'title': 'Infographics',
-            'subtitle': 'data visualization | since 2012',
-            'image': 'thumbnail-infographics.jpg',
-            'url': '/infographics',
-            'filter': 'all-filter'
-        }, {
             'title': 'Landscape Architecture',
             'subtitle': 'concept to construction | since 2008',
             'image': 'thumbnail-landscape.jpg',
             'url': '/landscape',
-            'filter': 'all-filter'
-        }, {
-            'title': 'LeanTaaS Redesign',
-            'subtitle': 'website re-skin | 2016',
-            'image': 'thumbnail-leantaas.jpg',
-            'url': '/leantaas',
             'filter': 'all-filter'
         }]
     }

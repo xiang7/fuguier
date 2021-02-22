@@ -33,6 +33,7 @@ urlpatterns = [
     path('pet-to-you', views.pet_to_you, name='pet-to-you'),
     path('personalized_activation', views.personalized_activation, name='personalized_activation'),
     path('game_console_configuration', views.game_console_configuration, name='game_console_configuration'),
+    path('subscription_tracker', views.subscription_tracker, name='subscription_tracker'),
     path('design-challenge-template', views.design_challenge_template, name='design_challenge_template'),
     
     #old pages

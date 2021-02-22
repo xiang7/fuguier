@@ -17,6 +17,12 @@ def index(request):
             'url': '/game_console_configuration',
             'filter': 'base-filter, ui-ux-filter, all-filter'
         }, {
+            'title': 'Subscription Tracker',
+            'subtitle': 'app and web experiences | 2020',
+            'image': 'subscription_tracker_tile.png',
+            'url': '/subscription_tracker',
+            'filter': 'base-filter, ui-ux-filter, all-filter'
+        }, {
             'title': 'Roku Themes',
             'subtitle': 'seasonal & sellable themes | 2017-2018',
             'image': 'thumbnail-roku-themes.jpg',
@@ -931,6 +937,62 @@ def game_console_configuration(request):
                     'title': 'Next Steps',
                     'descriptions': ['PMs are coordinating with game console companies and TV partners on using the actual game console logos for the input tiles. Stay tuned.'],
                     'images': [{'filename': 'game_console_bitmap.png'}]
+                    },
+                ]
+            }]}
+    return render(request, 'project.html', context)
+
+def subscription_tracker(request):
+    context = {
+        'contents': [{
+            'title': 'Subscription Tracker',
+            'subtitle': 'Manage and track all subscriptions in one place | 2020',
+            'titlebackgroundimage' : 'linear-gradient(to top, #1E2745, #1E2745);',
+            'featurecolor': '#21CD99',
+            'primarycolor': '#fff',
+            'categories': ['UI/UX'],
+            'overviewlines': [
+                'It’s always been painful in my household when it comes to tracking and managing all the subscriptions we have. It may be more of a challenge to people who are less tech savvy.',
+                ],
+            'bannerimage': {'filename':'subscription_tracker_banner.png', 'height':60, 'leadheight': 30},
+            'demos': [
+                {
+                    'images': [
+                        {'filename': 'subscription_tracker_presentation.gif'},
+                        {'filename': 'subscription_tracker_1.png'},
+                        {'filename': 'subscription_tracker_2.png'},
+                        {'filename': 'subscription_tracker_3.png'},
+                        {'filename': 'subscription_tracker_4.png'},
+                        {'filename': 'subscription_tracker_5.png'},
+                        {'filename': 'subscription_tracker_6.png'},
+                        {'filename': 'subscription_tracker_7.png'},
+                        {'filename': 'subscription_tracker_8.png'},
+                        {'filename': 'subscription_tracker_9.png'},
+                        {'filename': 'subscription_tracker_10.png'},
+                        {'filename': 'subscription_tracker_11.png'},
+                        {'filename': 'subscription_tracker_12.png'},
+                        {'filename': 'subscription_tracker_13.png'},
+                        {'filename': 'subscription_tracker_14.png'},
+                        {'filename': 'subscription_tracker_15.png'},
+                        {'filename': 'subscription_tracker_16.png'},
+                        {'filename': 'subscription_tracker_17.png'},
+                        {'filename': 'subscription_tracker_18.png'},
+                        {'filename': 'subscription_tracker_19.png'},
+                        {'filename': 'subscription_tracker_20.png'},
+                        {'filename': 'subscription_tracker_21.png'},
+                        {'filename': 'subscription_tracker_22.png'},
+                        {'filename': 'subscription_tracker_23.png'},
+                        {'filename': 'subscription_tracker_24.png'},
+                        {'filename': 'subscription_tracker_25.png'},
+                        {'filename': 'subscription_tracker_26.png'},
+                        {'filename': 'subscription_tracker_27.png'},
+                        {'filename': 'subscription_tracker_28.png'},
+                        {'filename': 'subscription_tracker_29.png'},
+                        ]
+                    },
+                {
+                    'title': 'Next Steps',
+                    'descriptions': ['The Team (me + my hubby) will use our spare time to get the app implemented and launched as step one; and then shoot for the comprehensive web platform if time, energy and our toddler son allows :)']
                     },
                 ]
             }]}
